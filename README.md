@@ -28,6 +28,9 @@ To the deploy the application to AWS:
 export AWS_ACCESS_KEY_ID=xxxxx
 export AWS_SECRET_ACCESS_KEY=xxxxx
 
+# export dynamodb table name
+export DYNAMODB_TABLE=numbers
+
 # trigger the CloudFormation (SAM) deploy
 bin/deploy.sh
 ```
