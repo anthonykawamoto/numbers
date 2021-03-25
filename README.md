@@ -11,6 +11,16 @@ This application is a minimal autoscaling API which connects with a data source,
 * Python 3.7
 
 ## Usage
+To install the python lambda dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+To test the lambda handler locally:
+```bash
+bin/test.sh
+```
+
 To the deploy the application to AWS:
 ```bash
 # export AWS keys
