@@ -9,6 +9,7 @@ This application is a minimal autoscaling API which connects with a data source,
 * AWS SAM CLI
 * Python 3.7
 * Docker
+* S3 bucket to host SAM artifacts
 
 ## Usage
 To install the python lambda dependencies:
