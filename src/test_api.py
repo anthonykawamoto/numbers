@@ -17,6 +17,13 @@ def test_returns_valid_responses(event, expected_response, reversed_value):
         assert handler(event, None) == expected_response
 
 
+def test_nonexistent_id():
+    test_event = {'queryStringParameters': {'id': 'doesnotexistid'}}
+
+    with patch('db.table.get_item', return_value={}):
+        assert handler(test_event, None) == {'statusCode': 200, 'body': json.dumps({})}
+
+
 invalid_value_test_cases = [
     [{}, {'statusCode': 400}],
     [{'queryStringParameters': {'name': 'ted'}}, {'statusCode': 400}]
