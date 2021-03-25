@@ -20,5 +20,4 @@ def get(target_id):
             'id': target_id
         }
     )
-    item = response.get('Item')
-    return item
+    return response.get('Item')
